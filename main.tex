@@ -1,0 +1,73 @@
+\documentclass[withoutpreface,bwprint]{thesis}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{blindtext}
+\usepackage{makecell}
+\usepackage[most]{tcolorbox}
+\usepackage{minted}
+\usepackage{indentfirst}
+\lhead{Titanix}
+
+\linespread{1.5}
+
+% \setcounter{tocdepth}{4}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{figure}[hbt]
+    \centering
+    \includegraphics[width=\linewidth]{figure/hitsz_logo.jpg}
+\end{figure}
+
+\begin{center}
+    \zihao{0}{
+        \heiti{Titanix 操作系统}
+
+        \heiti{设计文档}
+    }
+
+    \end{center}
+
+    \vspace{3cm}
+    \newcommand{\zihaothreetext}[1]{\text{\zihao{3}{#1}}}
+    \begin{alignat*}{2}
+        & \zihaothreetext{参赛队名：} && \zihaothreetext{Titanix} \\
+        & \zihaothreetext{队伍成员：} && \zihaothreetext{曾培鑫、陈佳豪、任秦江} \\
+        & \zihaothreetext{指导老师：} && \zihaothreetext{夏文、仇洁婷} \\
+    \end{alignat*}
+    
+    \begin{center}
+    \vspace{4cm}
+    \zihao{4}{
+        全国大学生计算机系统能力大赛 \\
+        操作系统赛 \\
+        内核实现赛道 \\
+        2023年05月 \\
+    }
+\end{center}
+
+\newpage
+
+\thispagestyle{empty}
+
+\begin{abstract}
+    \input{abs}
+\end{abstract}
+
+\pagestyle{fancy}
+% Uncomment the next line to generate a Table of Contents
+\setcounter{page}{1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%目录
+\tableofcontents
+\newpage
+
+% main content
+\input{body/introdution}
+\input{body/impl}
+\input{body/conclusion}
+
+\end{document}
